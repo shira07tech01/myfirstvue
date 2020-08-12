@@ -3,7 +3,7 @@
     <h1> {{ msg }} </h1>
         <input type="text" placeholder="add Todo.........." v-model="newToDo" @keyup.enter="addTodo(newToDo)">
         <div v-for="(todo,key) in todos" v-bind:key="todo.id">
-            {{key}}:{{ todo.title }}   <button @click="removeTodo(todo)">削除</button>
+            {{key}}:{{ todo.title }}   <button @click="removeTodo(key)">削除</button>
         </div>
        <h1> 追加だけのTo Do List</h1>
   </div>
@@ -43,17 +43,12 @@ export default {
       const newToDo = {
          id : Date.now(),
          title : title,
-         removeFlag : 0,
         }
       this.todos.push(newToDo);
       this.newToDo = '';
     },
-    //changeFlag: function(){
-    //   this.todo.removeFlag = this.todo.removeFlag == 0 ? 1 : 0
-    //},
-    removeTodo: function(todo) {
-      const idx = this.todos.indexOf(todo)
-      this.todos.splise(idx , 2)
+    removeTodo: function(id) {
+      this.todos.splice(id , 1)
       }
     }
   }
