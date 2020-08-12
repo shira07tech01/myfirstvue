@@ -1,22 +1,17 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Vue.js App</title>
-  <link rel="stylesheet" href="./main.css">
-</head>
-<body>
-    <div id＝"app" class="container">
-        <input type="text" placeholder="add ToDo..." v-model="newTodoTitle" @keyup.enter="addTodo(newTodoTitle)">
-        
-        <div v-for="todo in todos">
-            {{ todo.title }}
-        </div>
-    
-
-       <h1> 追加だけのTo Do List</h1>
-        
-    </div>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
 </html>
-
