@@ -28,7 +28,6 @@ export default {
             }
             this.todos.push(newToDo);
             this.newToDo = '';
-            this.$emit('addListToDo');
     },
             
         }

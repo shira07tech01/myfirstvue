@@ -1,7 +1,7 @@
 <template>
   <div class="todolist">
-        <TaskInput />
-        <TaskListItem />
+        <TaskInput :todos="todos" :newToDo="newToDo"/>
+        <TaskListItem :todos="todos"/>
   </div>
 </template>
 

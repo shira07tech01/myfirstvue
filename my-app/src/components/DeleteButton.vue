@@ -1,6 +1,6 @@
 <template>
   <div> class="todolist item">
-        <button @click="deleteList(id)">削除</button>
+        <button @click="deleteList">削除</button>
   </div>
 </template>
 
@@ -12,11 +12,15 @@ export default {
         todos:{
             type:Array,
             'default':[],
+        },
+        id:{
+            type:Number,
+            'default':0,
         }
     },
     methods: {
-        deleteList : function(id) {
-            this.todos.splice(id , 1)
+        deleteList : function() {
+            this.todos.splice(this.id , 1)
         }
     }
 }
