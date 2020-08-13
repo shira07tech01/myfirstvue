@@ -1,16 +1,17 @@
 <template>
   <div id="app">
-    <ToDoList msg="Welcome to Your Vue.js App"/>
+    <h1>Welcome to Your Vue.js App</h1>
+    <ToDo />
   </div>
 </template>
 
 <script>
-import ToDoList from './components/ToDoList.vue'
+import ToDo from './components/ToDo.vue'
 
 export default {
   name: 'App',
   components: {
-    ToDoList
+    ToDo
   }
 }
 </script>
