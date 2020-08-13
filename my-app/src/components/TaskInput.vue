@@ -1,5 +1,7 @@
 <template>
     <div class='taskinput'>
+        <h1>ああああああ</h1>
+        
         <input type="text" placeholder="add Todo..." v-model="newToDo" @keyup.enter="addListToDo(newToDo)">
     </div>
 </template>
@@ -13,7 +15,7 @@ export default {
             'default':[]
         },
         newToDo: {
-            type:Text,
+            type:String,
             'default':"",
         }
     },
