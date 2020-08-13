@@ -9,9 +9,9 @@
 export default {
     name : 'DeleteButton',
     props:{
-        todos:{
-            type:Array,
-            'default':[],
+        todo:{
+            type:Object,
+            'default':{},
         },
         id:{
             type:Number,
