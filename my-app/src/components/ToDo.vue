@@ -1,31 +1,28 @@
 <template>
   <div class="todolist">
-        <TaskInput :todos.sync="todos" :newToDo.sync="newToDo"/>
-        <TaskListItem :todos.sync="todos"/>
+    <TaskInput :todos.sync="todos" :newToDo.sync="newToDo" />
+    <TaskListItem :todos.sync="todos" />
   </div>
 </template>
 
 <script>
-
-import TaskInput from './TaskInput.vue'
-import TaskListItem from './TaskListItem.vue'
-
+import TaskInput from "./TaskInput.vue";
+import TaskListItem from "./TaskListItem.vue";
 
 export default {
-  name: 'ToDo',
+  name: "ToDo",
   components: {
     TaskInput,
     TaskListItem,
   },
-  data : function(){
-    return{
+  data: function () {
+    return {
       todos: [],
       newToDo: "",
-      checkDone:0,
-    }
+      checkDone: 0,
+    };
   },
-}  
-
+};
 </script>
 
 
