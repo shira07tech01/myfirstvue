@@ -17,7 +17,6 @@ export default {
     methods: {
         deleteList : function(id) {
             this.todos.splice(id , 1)
-            this.$emit('deleteList');
         }
     }
 }
