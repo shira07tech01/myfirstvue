@@ -1,7 +1,5 @@
 <template>
   <div class="taskinput">
-    <h1>ああああああ</h1>
-
     <input
       type="text"
       placeholder="add Todo..."
@@ -17,7 +15,7 @@ export default {
   props: {
     todos: {
       type: Array,
-      default: [],
+      default: () => {},
     },
     newToDo: {
       type: String,

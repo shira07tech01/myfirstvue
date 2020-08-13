@@ -1,6 +1,5 @@
 <template>
   <div class="todolistitem">
-    いいいいいい
     <div v-for="(todo,key) in todos" v-bind:key="todo.id">
       {{ key }}{{ todo.title }}
       <DeleteButton :todo="todo" :id.sync="id" />
@@ -15,7 +14,7 @@ export default {
   props: {
     todos: {
       type: Array,
-      default: [],
+      default: () => [],
     },
   },
   components: {

@@ -11,7 +11,7 @@ export default {
   props: {
     todo: {
       type: Object,
-      default: {},
+      default: () => {},
     },
     id: {
       type: Number,
