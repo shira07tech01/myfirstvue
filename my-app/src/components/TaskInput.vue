@@ -24,6 +24,7 @@ export default {
         title: title,
       };
       this.$emit("makeitem", newToDo);
+      this.title = "";
     },
   },
 };
