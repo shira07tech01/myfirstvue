@@ -1,19 +1,19 @@
 <template>
   <div class="todolist">
     <TaskInput @makeitem="addToDoList($event)" />
-    <TaskListItem :todos="todos" />
+    <TaskList :todos="todos" />
   </div>
 </template>
 
 <script>
 import TaskInput from "./TaskInput.vue";
-import TaskListItem from "./TaskList.vue";
+import TaskList from "./TaskList.vue";
 
 export default {
   name: "ToDo",
   components: {
     TaskInput,
-    TaskListItem,
+    TaskList,
   },
   data: function () {
     return {
