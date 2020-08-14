@@ -1,7 +1,7 @@
 <template>
   <div class="todolist">
     <div v-for="(todo,key) in todos" v-bind:key="todo.id">
-      <TaskListItem :item="todo" />
+      <TaskListItem :item="todo" :id="key" />
       <DeleteButton :todos="todos" :id="key" />
     </div>
   </div>
