@@ -12,6 +12,11 @@
 <script>
 export default {
   name: "TaskInput",
+  data() {
+    return {
+      title: "",
+    };
+  },
   methods: {
     makeListToDoItem: function (title) {
       const newToDo = {

@@ -7,7 +7,7 @@
 
 <script>
 import TaskInput from "./TaskInput.vue";
-import TaskListItem from "./TaskListItem.vue";
+import TaskListItem from "./TaskList.vue";
 
 export default {
   name: "ToDo",

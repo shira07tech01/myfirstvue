@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <class="todolistitem">
+  <div class="deletebutton">
     <button @click="deleteList">削除</button>
   </div>
 </template>
@@ -9,8 +8,8 @@
 export default {
   name: "DeleteButton",
   props: {
-    todo: {
-      type: Object,
+    todos: {
+      type: Array,
       required: true,
     },
     id: {
@@ -22,6 +21,7 @@ export default {
   methods: {
     deleteList: function () {
       this.todos.splice(this.id, 1);
+      this.$emit("delete", this.todos);
     },
   },
 };
