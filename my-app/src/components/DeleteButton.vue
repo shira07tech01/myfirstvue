@@ -11,10 +11,11 @@ export default {
   props: {
     todo: {
       type: Object,
-      default: () => {},
+      required: true,
     },
     id: {
       type: Number,
+      reqired: true,
       default: 0,
     },
   },

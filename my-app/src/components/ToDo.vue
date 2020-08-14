@@ -1,7 +1,7 @@
 <template>
   <div class="todolist">
-    <TaskInput :todos.sync="todos" :newToDo.sync="newToDo" />
-    <TaskListItem :todos.sync="todos" />
+    <TaskInput @makeitem="addToDoList($event)" />
+    <TaskListItem :todos="todos" />
   </div>
 </template>
 
@@ -18,9 +18,14 @@ export default {
   data: function () {
     return {
       todos: [],
-      newToDo: "",
+      newToDoTitle: "",
       checkDone: 0,
     };
+  },
+  methods: {
+    addToDoList(newToDo) {
+      this.todos.push(newToDo);
+    },
   },
 };
 </script>

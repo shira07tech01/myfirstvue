@@ -3,8 +3,8 @@
     <input
       type="text"
       placeholder="add Todo..."
-      v-model="newToDo"
-      @keyup.enter="addListToDo(newToDo)"
+      v-model="title"
+      @keyup.enter="makeListToDoItem(title)"
     />
   </div>
 </template>
@@ -12,27 +12,13 @@
 <script>
 export default {
   name: "TaskInput",
-  props: {
-    todos: {
-      type: Array,
-      default: () => {},
-    },
-    newToDo: {
-      type: String,
-      default: "",
-    },
-  },
   methods: {
-    addListToDo: function (title) {
-      if (!this.newToDO) {
-        return;
-      }
+    makeListToDoItem: function (title) {
       const newToDo = {
         id: Date.now(),
         title: title,
       };
-      this.todos.push(newToDo);
-      this.newToDo = "";
+      this.$emit("makeitem", newToDo);
     },
   },
 };

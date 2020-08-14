@@ -14,7 +14,7 @@ export default {
   props: {
     todos: {
       type: Array,
-      default: () => [],
+      required: true,
     },
   },
   components: {
